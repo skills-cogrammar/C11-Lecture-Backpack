@@ -2,7 +2,7 @@
 
 [Quickstart Guide](https://youtu.be/M2MO06bIJRI) (TL;DR Video)
 
-Welcome to the Lecture Backpack 🚀, a comprehensive resource repository designed for students and enthusiasts in CyberSecurity, Data Science, Full Stack Web Development, Software Engineering, and anyone looking to sharpen their coding interview skills. Our goal is to provide an all-encompassing learning experience that caters to a wide range of educational needs, from basic programming concepts to specialized topics in various tech fields.
+Welcome to the Lecture Backpack 🚀, a comprehensive resource repository designed for students and enthusiasts in Leadership and Management in Tech, Digital Marketing, Software Engineering. Our goal is to provide an all-encompassing learning experience that caters to a wide range of educational needs.
 
 ## Overview 📚
 
@@ -12,17 +12,8 @@ The [Automated Pull Scripts](Automated%20Pull%20Scripts/) folder contains script
 
 #### Folders and Scripts:
 
-- **CS**: Contains the sparse checkout scripts for macOS, Windows, and Linux.
-  - Files: `CS_repo_clone_MacOS`, `CS_repo_clone_Windows`, `CS_repo_clone_Linux`
-
-- **DS**: Contains the sparse checkout scripts for macOS, Windows, and Linux.
-  - Files: `DS_repo_clone_MacOS`, `DS_repo_clone_Windows`, `DS_repo_clone_Linux`
-
 - **SE**: Contains the sparse checkout scripts for macOS, Windows, and Linux.
   - Files: `SE_repo_clone_MacOS`, `SE_repo_clone_Windows`, `SE_repo_clone_Linux`
-
-- **WD**: Contains the sparse checkout scripts for macOS, Windows, and Linux.
-  - Files: `WD_repo_clone_MacOS`, `WD_repo_clone_Windows`, `WD_repo_clone_Linux`
 
 ### Using the Scripts
 
@@ -30,7 +21,7 @@ Learners should start by using the appropriate script for their stream and opera
 
 1. **Install Git**: Before you begin, ensure that Git is installed on your local machine. You can find detailed installation instructions in the internal documentation located at [`StarterPack/Git/README.md`](StarterPack/Git/README.md).
 
-2. **Choose and Download an Automated Pull Script**: Depending on your chosen stream (e.g., Data Science, Software Engineering, Full Stack Web Development, Cybersecurity) and your operating system, download the appropriate Automated Pull Script provided in the repository.
+2. **Choose and Download an Automated Pull Script**: Depending on your chosen stream (Software Engineering) and your operating system, download the appropriate Automated Pull Script provided in the repository.
 
    - **Download the script**:
      - **Right-click on the script link** below for your stream and operating system.
@@ -43,11 +34,7 @@ This guide provides download links for repository clone scripts across different
 
 | Stream | ![Mac Icon](https://img.icons8.com/color/48/000000/mac-os.png)<br>macOS Script | ![Windows Icon](https://img.icons8.com/color/48/000000/windows-10.png)<br>Windows Script | ![Linux Icon](https://img.icons8.com/color/48/000000/linux.png)<br>Linux Script |
 |--------|:-------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------:|
-| **CS** | [Download CS_repo_clone_MacOS.sh](https://raw.githubusercontent.com/skills-cogrammar/C8-Lecture-Backpack/main/Automated%20Pull%20Scripts/CS/CS_repo_clone_MacOS.sh) | [Download CS_repo_clone_Windows.bat](https://raw.githubusercontent.com/skills-cogrammar/C8-Lecture-Backpack/main/Automated%20Pull%20Scripts/CS/CS_repo_clone_Windows.bat) | [Download CS_repo_clone_Linux.sh](https://raw.githubusercontent.com/skills-cogrammar/C8-Lecture-Backpack/main/Automated%20Pull%20Scripts/CS/CS_repo_clone_Linux.sh) |
-| **DS** | [Download DS_repo_clone_MacOS.sh](https://raw.githubusercontent.com/skills-cogrammar/C8-Lecture-Backpack/main/Automated%20Pull%20Scripts/DS/DS_repo_clone_MacOS.sh) | [Download DS_repo_clone_Windows.bat](https://raw.githubusercontent.com/skills-cogrammar/C8-Lecture-Backpack/main/Automated%20Pull%20Scripts/DS/DS_repo_clone_Windows.bat) | [Download DS_repo_clone_Linux.sh](https://raw.githubusercontent.com/skills-cogrammar/C8-Lecture-Backpack/main/Automated%20Pull%20Scripts/DS/DS_repo_clone_Linux.sh) |
 | **SE** | [Download SE_repo_clone_MacOS.sh](https://raw.githubusercontent.com/skills-cogrammar/C8-Lecture-Backpack/main/Automated%20Pull%20Scripts/SE/SE_repo_clone_MacOS.sh) | [Download SE_repo_clone_Windows.bat](https://raw.githubusercontent.com/skills-cogrammar/C8-Lecture-Backpack/main/Automated%20Pull%20Scripts/SE/SE_repo_clone_Windows.bat) | [Download SE_repo_clone_Linux.sh](https://raw.githubusercontent.com/skills-cogrammar/C8-Lecture-Backpack/main/Automated%20Pull%20Scripts/SE/SE_repo_clone_Linux.sh) |
-| **WD** | [Download WD_repo_clone_MacOS.sh](https://raw.githubusercontent.com/skills-cogrammar/C8-Lecture-Backpack/main/Automated%20Pull%20Scripts/WD/WD_repo_clone_MacOS.sh) | [Download WD_repo_clone_Windows.bat](https://raw.githubusercontent.com/skills-cogrammar/C8-Lecture-Backpack/main/Automated%20Pull%20Scripts/WD/WD_repo_clone_Windows.bat) | [Download WD_repo_clone_Linux.sh](https://raw.githubusercontent.com/skills-cogrammar/C8-Lecture-Backpack/main/Automated%20Pull%20Scripts/WD/WD_repo_clone_Linux.sh) |
-
 
 
 **Note:** Please ensure that you have `git` installed and configured on your machine before running these scripts.
@@ -78,33 +65,25 @@ This rest of the repository is structured into four main folders, each targeting
   - **Web Development with Django**: Building web applications using Django, including MVT design pattern and authentication.
   - **Data Structures and Algorithms**: Introduction to data structures like stacks and trees, and algorithms for sorting and searching.
 
-- **[CyberSecurity (CS)](CyberSecurity%20(CS)/)** : This stream covers foundational and advanced topics in cybersecurity, focusing on both technical skills and strategic responses to security challenges. It includes:
+- **[Digital Marketing (DGM)](Digital%20Marketing%20(DGM)/)** : This stream provides a comprehensive overview of modern digital marketing, progressing from fundamentals to advanced strategies. It covers:
 
-  - **Python Programming Fundamentals**: Basics of Python, including data types, conditionals, loops, and data structures.
-  - **Debugging and OOP**: Techniques for debugging Python code and understanding Object-Oriented Programming.
-  - **Cybersecurity Fundamentals**: Overview of cyber crimes, governance frameworks, and incident response strategies.
-  - **Linux & Bash**: Basic Linux commands and Bash scripting for system administration and automation.
-  - **Web Security**: Understanding web development basics, MITM attacks, XSS vulnerabilities, and SQL injection prevention.
-  - **Ethical Hacking**: Techniques for penetration testing and ethical hacking to assess and improve security.
+  - **Marketing Fundamentals**: Introduction to digital marketing concepts, use cases, and social media analytics
+  - **Web Presence**: Website development, CMS systems, technical aspects of web design, and UX/UI principles
+  - **Search Engine Optimization**: Understanding SEO types, keyword research, tools, and strategy development
+  - **Paid Marketing**: Foundation of PPC (Pay-Per-Click), campaign planning and execution
+  - **Content Strategy**: Digital storytelling, brand identity, content marketing, and AI integration
+  - **Marketing Channels**: Email marketing, campaign design, and platform integration
+  - **Analytics & Security**: Data analysis tools, visualization, CRM, and digital security
+  - **Campaign Management**: SMART goals, campaign execution, and measuring success
 
-- **[Data Science (DS)](Data%20Science%20(DS)/)** : This stream offers a comprehensive introduction to data science, covering fundamental programming skills, data manipulation, and advanced machine learning techniques. It includes:
+- **[Leadership and Management in Tech (L&M)](Leadership%20and%20Management%20in%20Tech%20(L&M)/)** : This stream is designed to develop comprehensive leadership and management skills for technology professionals, covering:
 
-  - **Python Fundamentals**: Basics of Python, including data types, conditional statements, loops, and functions.
-  - **Data Management**: Using Pandas for data manipulation, handling datasets, and performing data analysis and visualization with Matplotlib and Seaborn.
-  - **Data Analysis and Visualization**: Techniques for data cleaning, preprocessing, and visualization to uncover insights and communicate findings effectively.
-  - **Exploratory Data Analysis (EDA)**: Conducting EDA to identify patterns and guide further analysis.
-  - **Machine Learning Basics**: Introduction to machine learning concepts, including simple and multiple linear regression, decision trees, and random forests.
-  - **Advanced Machine Learning Techniques**: Implementing and understanding decision trees and random forests to enhance predictive accuracy and model robustness.
+ - **Decision-Making and Strategy**: Understanding decision-making styles, risk assessment, and strategic planning
+ - **Communication and Team Building**: Developing effective communication skills, building high-performance teams, and fostering innovation
+ - **Project and Product Management**: Learning project planning, stakeholder management, and product development processes
+ - **Professional Development**: Focusing on networking, work-life balance, cultural competence, and advocacy skills
+ - **Employee Engagement**: Mastering talent development, engagement strategies, and inclusive leadership practices
 
-
-- **[Full Stack Web Development (WD)](Full%20Stack%20Web%20Development%20(WD)/)** : This stream provides a comprehensive introduction to web development, starting with the basics of HTML and CSS, and advancing to modern JavaScript frameworks and backend development. It covers:
-
-  - **HTML & CSS Fundamentals**: Basics of HTML and CSS, including creating website skeletons and styling.
-  - **JavaScript Basics**: Core concepts of JavaScript, including variables, data types, control flow, and DOM manipulation.
-  - **React Development**: Building web applications using React, including components, hooks, state management, and routing.
-  - **Backend Development with Node.js and Express**: Introduction to Node.js, building RESTful APIs with Express.js, and server-side routing.
-  - **Database Integration with MongoDB**: Setting up and connecting to a MongoDB database, and interacting with it using Mongoose.
-  - **Authentication and Security**: Implementing user registration and login, and using JWT for session management.
 
 ## Getting Started 🚦
 
@@ -112,7 +91,7 @@ To get started with the Lecture Backpack, follow these steps:
 
 1. **Install Git**: Before you begin, ensure that Git is installed on your local machine. You can find detailed installation instructions in the internal documentation located at [`StarterPack/Git/README.md`](StarterPack/Git/README.md).
 
-2. **Choose and Download an Automated Pull Script**: Depending on your chosen stream (e.g., Data Science, Software Engineering, Full Stack Web Development, Cybersecurity) and your operating system, download the appropriate Automated Pull Script provided in the repository.
+2. **Choose and Download an Automated Pull Script**: Depending on your chosen stream (Software Engineering) and your operating system, download the appropriate Automated Pull Script provided in the repository.
 
    - **Download the script**:
      - **Right-click on the script** link below for your stream and operating system.
@@ -127,7 +106,7 @@ To get started with the Lecture Backpack, follow these steps:
 | **WD** | [Download WD_repo_clone_MacOS.sh](https://raw.githubusercontent.com/skills-cogrammar/C8-Lecture-Backpack/main/Automated%20Pull%20Scripts/WD/WD_repo_clone_MacOS.sh) | [Download WD_repo_clone_Windows.bat](https://raw.githubusercontent.com/skills-cogrammar/C8-Lecture-Backpack/main/Automated%20Pull%20Scripts/WD/WD_repo_clone_Windows.bat) | [Download WD_repo_clone_Linux.sh](https://raw.githubusercontent.com/skills-cogrammar/C8-Lecture-Backpack/main/Automated%20Pull%20Scripts/WD/WD_repo_clone_Linux.sh) |
 
 
-3. **Choose your track**: Begin with the basic Python starter module relevant to your chosen stream (e.g., Data Science, Software Engineering, Full Stack Web Development, Cybersecurity). After completing the Python starter, proceed to the specific modules for your stream. You are welcome to explore other streams as well if you wish to broaden your knowledge.
+3. **Choose your track**: Begin with the basic Python starter module relevant to your chosen stream (Software Engineering). After completing the Python starter, proceed to the specific modules for your stream. You are welcome to explore other streams as well if you wish to broaden your knowledge.
 
 ## License 📄
 
