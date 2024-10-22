@@ -78,12 +78,11 @@ This rest of the repository is structured into four main folders, each targeting
 
 - **[Leadership and Management in Tech (L&M)](Leadership%20and%20Management%20in%20Tech%20(L&M)/)** : This stream is designed to develop comprehensive leadership and management skills for technology professionals, covering:
 
- - **Decision-Making and Strategy**: Understanding decision-making styles, risk assessment, and strategic planning
- - **Communication and Team Building**: Developing effective communication skills, building high-performance teams, and fostering innovation
- - **Project and Product Management**: Learning project planning, stakeholder management, and product development processes
- - **Professional Development**: Focusing on networking, work-life balance, cultural competence, and advocacy skills
- - **Employee Engagement**: Mastering talent development, engagement strategies, and inclusive leadership practices
-
+  - **Decision-Making and Strategy**: Understanding decision-making styles, risk assessment, and strategic planning
+  - **Communication and Team Building**: Developing effective communication skills, building high-performance teams, and fostering innovation
+  - **Project and Product Management**: Learning project planning, stakeholder management, and product development processes
+  - **Professional Development**: Focusing on networking, work-life balance, cultural competence, and advocacy skills
+  - **Employee Engagement**: Mastering talent development, engagement strategies, and inclusive leadership practices
 
 ## Getting Started 🚦
 
