@@ -84,6 +84,17 @@ This rest of the repository is structured into four main folders, each targeting
   - **Professional Development**: Focusing on networking, work-life balance, cultural competence, and advocacy skills
   - **Employee Engagement**: Mastering talent development, engagement strategies, and inclusive leadership practices
 
+- **[Cloud Web Development (CWD)](Cloud%20Web%20Development%20(CWD)/)** : This stream is designed to develop comprehensive cloud web development understanding, covering:
+
+  - **Cloud Web Development Fundamentals**: Overview of cloud computing, benefits, and popular service models (IaaS, PaaS, SaaS).
+  - **Hosting & Deployment**: Understanding cloud hosting, continuous deployment, serverless architecture, and environment configuration.
+  - **Frontend Development**: Modern frontend frameworks, responsive design, and cloud-based tools for frontend development.
+  - **Backend Development**: Building APIs, server management, and integration with cloud databases.
+  - **Cloud Storage & Databases**: Utilizing cloud storage solutions, understanding NoSQL and SQL cloud databases, and data synchronization.
+  - **Security & Compliance**: Overview of cloud security principles, data privacy, and compliance with industry standards.
+  - **Performance Optimization**: Scaling applications, load balancing, caching techniques, and cost-effective resource management.
+  - **DevOps Integration**: Implementing CI/CD pipelines, monitoring tools, and automation in the cloud environment.
+
 ## Getting Started 🚦
 
 To get started with the Lecture Backpack, follow these steps:
