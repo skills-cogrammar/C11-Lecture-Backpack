@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- Firstly using external styling : Use the rel attribute -->
+        <!-- The link is cascade.css and the relationship is that the link 
+            is a stylesheet to the current file.-->
+        <link href="cascade.css" rel="stylesheet">
+        <!-- Secondly using internal styling : Use the <style> element -->
+        <style>
+            p {
+                font-family: Verdana;
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Thirdly using inline styling : Use the style attribute -->
+        <p style="background-color: brown;">This is my example paragraph.</p>
+
+        <!-- Below we are using the heading class selector styling  
+             as well as the head id selector styling from the cascade.css file
+        -->
+        <h1 class="heading" id="head">Farewell</h1>
+    </body>
+</html>
