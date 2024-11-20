@@ -1,0 +1,14 @@
+#bio {
+    color: green;
+    font-size: 60px;
+}
+
+h2.heading {
+    color: brown;
+}
+
+h3 {
+    background-color: bisque;
+    padding-top: 20px;
+    margin-right: 20px;
+}
