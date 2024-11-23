@@ -1,0 +1,85 @@
+/* general styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* color: white; */
+    line-height: 1.5;
+}
+
+/* header styles */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(240, 235, 235);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-signup {
+    padding: 0.5rem;
+    background-color: rgb(215, 85, 85);
+    border: none;
+    border-radius: 20px;
+}
+
+.btn-signup:hover {
+    background-color: cadetblue;
+}
+
+/* main section styles */
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.btn-subscribe {
+    padding: 0.5rem;
+    background-color: rgb(215, 85, 85);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-subscribe:hover {
+    background-color: cadetblue;
+}
+
+.content {
+    position: relative;
+}
+
+.title-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
