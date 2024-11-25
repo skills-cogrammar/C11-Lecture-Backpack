@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitats</title>
+
+    <style>
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10vw;
+            padding: 5vh;
+        }
+
+        .grid-item {
+            font-size: 5vh;
+            text-align: center;
+            border-radius: 5vh;
+        }
+
+        img {
+            display: none;
+        }
+
+        @media (max-width: 350px){
+            .grid-container {
+                display: none;
+            }
+
+            img {
+                display: inline;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1> Habitats Around the World </h1>
+    <div class = "grid-container">
+        <div class = "grid-item" style="background-color: green;"> Rainforest </div>
+        <div class = "grid-item" style="background-color: whitesmoke;"> Tundra </div>
+        <div class = "grid-item" style="background-color: bisque"> Desert </div>
+        <div class = "grid-item" style="background-color: lightblue" > Ocean </div>
+        <div class = "grid-item" style="background-color: greenyellow"> Grassland </div>
+        <div class = "grid-item" style="background-color: peru"> Mountain </div>
+    </div>
+
+    <img src="images/habitats.webp"/>
+    
+</body>
+</html>
