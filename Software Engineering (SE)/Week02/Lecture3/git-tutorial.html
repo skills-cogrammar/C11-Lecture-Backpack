@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git & GitHub Practical Tutorial</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+        }
+        
+        .objective {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .step {
+            background-color: #fff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        code {
+            background-color: #f6f8fa;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        pre {
+            background-color: #f6f8fa;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+        
+        .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .file-content {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Git & GitHub Practical Tutorial</h1>
+
+    <div class="objective">
+        <h2>Objective</h2>
+        <p>Create a repository, make changes, and understand how to push these changes to GitHub. This exercise will help you gain a basic understanding of how to initialize a repository, make commits, and work with GitHub as a remote.</p>
+    </div>
+
+    <h2>Prerequisites</h2>
+    <ul>
+        <li>Git installed on your computer</li>
+        <li>GitHub account created</li>
+        <li>Basic understanding of HTML and CSS</li>
+        <li>Text editor (VS Code recommended)</li>
+    </ul>
+
+    <h2>Detailed Steps</h2>
+
+    <div class="step">
+        <h3>1. Set Up and Initialize Git</h3>
+        <p>First, configure your Git identity. Open terminal/command prompt and run:</p>
+        <pre>
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"</pre>
+    </div>
+
+    <div class="step">
+        <h3>2. Create a Local Repository</h3>
+        <ol>
+            <li>Create a new folder for your project:
+                <pre>
+mkdir my-first-website
+cd my-first-website</pre>
+            </li>
+            <li>Initialize the repository:
+                <pre>git init</pre>
+            </li>
+        </ol>
+    </div>
+
+    <div class="step">
+        <h3>3. Create and Add Files to the Repository</h3>
+        <p>Create two files: <code>index.html</code> and <code>styles.css</code></p>
+        
+        <p>Content for <code>index.html</code>:</p>
+        <div class="file-content">
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My First Git Project&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1&gt;Hello, Git!&lt;/h1&gt;
+        &lt;p&gt;This is my first version-controlled website.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+        </div>
+
+        <p>Content for <code>styles.css</code>:</p>
+        <div class="file-content">
+            <pre>
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+p {
+    color: #34495e;
+}</pre>
+        </div>
+    </div>
+
+    <div class="step">
+        <h3>4. Commit Changes</h3>
+        <ol>
+            <li>Check the status of your repository:
+                <pre>git status</pre>
+            </li>
+            <li>Add the files to the staging area:
+                <pre>git add index.html styles.css</pre>
+            </li>
+            <li>Commit the changes:
+                <pre>git commit -m "Initial commit: Add basic website files"</pre>
+            </li>
+        </ol>
+    </div>
+
+    <div class="step">
+        <h3>5. Push Changes to GitHub</h3>
+        <ol>
+            <li>Go to GitHub and create a new repository (without initializing with README)</li>
+            <li>Connect your local repository to GitHub:
+                <pre>git remote add origin https://github.com/your-username/my-first-website.git</pre>
+            </li>
+            <li>Push your changes to GitHub:
+                <pre>git push -u origin main</pre>
+                <div class="note">Note: If you're using an older version of Git, you might need to use <code>master</code> instead of <code>main</code></div>
+            </li>
+        </ol>
+    </div>
+
+    <div class="step">
+        <h3>6. Verify and View Changes on GitHub</h3>
+        <ol>
+            <li>Go to your GitHub repository URL</li>
+            <li>You should see your files listed in the repository</li>
+            <li>Click on the files to view their contents</li>
+            <li>Check the commit history by clicking on "commits"</li>
+        </ol>
+    </div>
+
+    <div class="note">
+        <h3>Common Issues and Solutions</h3>
+        <ul>
+            <li>If you get authentication errors, make sure you're logged into GitHub</li>
+            <li>If <code>git push</code> fails, check if your repository URL is correct</li>
+            <li>If files aren't showing up in staging, verify that you're in the correct directory</li>
+        </ul>
+    </div>
+
+</body>
+</html>
