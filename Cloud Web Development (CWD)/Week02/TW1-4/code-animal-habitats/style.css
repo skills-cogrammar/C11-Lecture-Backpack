@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* header */
+header {
+  background-color: yellow;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 3px;
+}
+
+/* grid container */
+.grid-container {
+  display: grid;
+  gap: 20px;
+  padding: 2rem;
+  row-gap: 20px;
+}
+
+img {
+  width: 100%;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px greenyellow;
+}
+
+.card h2 {
+  font-size: 1.3rem;
+}
+
+.card p {
+  font-size: 1rem;
+}
+
+/* media queries */
+@media (max-width: 700px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .card img {
+    height: 120px;
+  }
+}
