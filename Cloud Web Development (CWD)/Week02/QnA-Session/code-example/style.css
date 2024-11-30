@@ -1,0 +1,15 @@
+html {
+    font-size: 16px;
+}
+
+.container {
+    font-size: 50px;
+}
+
+.container .child-em {
+    font-size: 1.5em; /* 0.5 x 50px = 25px */
+}
+
+.container .child-rem {
+    font-size: 1.5rem; /* 1.5 x 16px = 24px */
+}
