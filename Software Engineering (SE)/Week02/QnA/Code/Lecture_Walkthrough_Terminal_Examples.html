@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture Walkthrough: Version Control</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="bg-primary text-white py-3">
+        <div class="container">
+            <h1>Lecture Walkthrough: Version Control</h1>
+        </div>
+    </header>
+    <main class="container my-5">
+        <section>
+            <h2>1. Terminal Refresher</h2>
+            <p><strong>Activity:</strong> Create a project directory and navigate to it using the following commands:</p>
+            <ul>
+                <li><code>mkdir project</code> - Create a directory named <code>project</code>.</li>
+                <li><code>cd project</code> - Navigate into the <code>project</code> directory.</li>
+                <li><code>touch index.html</code> - Create a file named <code>index.html</code>.</li>
+                <li><code>ls</code> - List the files and directories in the current directory.</li>
+                <li><code>pwd</code> - Display the current working directory.</li>
+                <li><code>cat index.html</code> - Display the contents of <code>index.html</code>.</li>
+                <li><code>rm index.html</code> - Remove the <code>index.html</code> file.</li>
+            </ul>
+            <p>Ask learners what they think they can't do on the terminal compared to a GUI.</p>
+            <p><strong>Engaging Question:</strong> What do you find most challenging about using the terminal compared to a GUI?</p>
+            <p><strong>On-stage Task:</strong> Invite a learner to navigate directories and demonstrate basic terminal commands.</p>
+        </section>
+        <section>
+            <h2>2. Git Basics</h2>
+            <p><strong>Local Git Installation:</strong> Ensure Git is installed and configure user settings using <code>git config --global</code>.</p>
+            <p><strong>Workflow Demo:</strong></p>
+            <ul>
+                <li>Initialize a repository: <code>git init</code>.</li>
+                <li>Create a file (<code>README.md</code>) and add content.</li>
+                <li>Stage and commit changes: <code>git add</code> and <code>git commit -m</code>.</li>
+            </ul>
+            <p><strong>Engaging Questions:</strong></p>
+            <ul>
+                <li>Why do you think Git requires staging changes before committing them?</li>
+                <li>Can anyone explain the difference between <code>git add</code> and <code>git commit</code>?</li>
+            </ul>
+            <p><strong>On-stage Task:</strong> Ask a learner to demonstrate creating a file and committing changes.</p>
+        </section>
+        <section>
+            <h2>3. <code>.gitignore</code> and Ignoring Files</h2>
+            <p><strong>Introduction to <code>.gitignore</code>:</strong> Discuss its purpose in preventing sensitive or unnecessary files from being tracked, e.g., <code>.env</code> files, logs, or dependencies (<code>node_modules/</code>).</p>
+            <p><strong>Activity:</strong> Create a <code>.gitignore</code> file and add rules.</p>
+            <p><strong>Engaging Questions:</strong></p>
+            <ul>
+                <li>What kinds of files should never be shared in a repository?</li>
+                <li>Why might you ignore a <code>node_modules/</code> directory?</li>
+            </ul>
+            <p><strong>On-stage Task:</strong> Guide a learner to create a <code>.gitignore</code> file and demonstrate its effect.</p>
+        </section>
+        <section>
+            <h2>4. GitHub Introduction</h2>
+            <p><strong>Registration & Setup:</strong> Guide learners to sign up on GitHub (if needed) and create a new repository via the GitHub web interface.</p>
+            <p><strong>Connecting Git and GitHub:</strong></p>
+            <ul>
+                <li>Add a remote: <code>git remote add origin</code>.</li>
+                <li>Push changes: <code>git push -u origin main</code>.</li>
+            </ul>
+            <p><strong>Engaging Questions:</strong></p>
+            <ul>
+                <li>How does GitHub simplify collaboration?</li>
+            </ul>
+            <p><strong>On-stage Task:</strong> Invite a learner to create a branch, make changes, and resolve a conflict.</p>
+        </section>
+        <section>
+            <h2>5. Collaborative Workflow</h2>
+            <p><strong>Branching:</strong> Create and switch branches using <code>git branch</code> and <code>git checkout</code>. Simulate feature development by modifying a file.</p>
+            <p><strong>Merging:</strong> Merge changes using <code>git merge</code> and resolve conflicts (intentional conflict setup).</p>
+            <p><strong>Engaging Questions:</strong></p>
+            <ul>
+                <li>Why is branching important in team projects?</li>
+                <li>What strategies would you use to avoid conflicts during merging?</li>
+                <li>How can branching help teams work on multiple features?</li>
+                <li>What steps can you take to avoid frequent merge conflicts?</li>
+            </ul>
+            <p><strong>On-stage Task:</strong> Invite a learner to create a branch, make changes, and resolve a conflict.</p>
+        </section>
+        <section>
+            <h2>6. GitHub.dev Exploration</h2>
+            <p><strong>Introduction:</strong> Demonstrate GitHub.dev (press <code>.</code> in a GitHub repo).</p>
+            <p><strong>Activity:</strong> Use GitHub.dev to edit the <code>README.md</code> file and commit changes directly.</p>
+            <p><strong>Engaging Questions:</strong></p>
+            <ul>
+                <li>How might GitHub.dev help if your local environment isn't available?</li>
+                <li>What are the benefits of browser-based development?</li>
+                <li>What limitations do you see with GitHub.dev compared to local development?</li>
+            </ul>
+            <p><strong>On-stage Task:</strong> Have a learner open a repo in GitHub.dev and make an edit.</p>
+        </section>
+    </main>
+    <footer class="bg-light py-3">
+        <div class="container">
+            <p class="text-center mb-0">&copy; 2024 Version Control Lecture</p>
+        </div>
+    </footer>
+</body>
+</html>
