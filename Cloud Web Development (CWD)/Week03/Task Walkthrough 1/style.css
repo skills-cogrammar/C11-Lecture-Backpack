@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.hero {
+    width: 100vw;
+    height: 50vh;
+    background-image: url("https://www.volaband.com/wp-content/themes/vola/img/home-banner-2024-top.jpg"); 
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 40% auto;
+    align-items: center;
+}
+
+.hero .content {     
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.learn-more {
+    height: 50px;
+    width: 250px;
+    background-color: crimson;
+    border: none;
+}
+
+.hero .band-name{
+    margin: 0;
+    font-size: 60px;
+}
+
+.about-us {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.about-us .content{
+    width: 900px
+}
+
+.band-members {
+    width: 100vw;    
+    display: flex;
+    justify-content: center;
+}
+
+.band-members ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+}
+
+.band-members li {
+    width: 300px;
+    height: 100px;
+    background-color: aquamarine;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;    
+}
+
+.albums {
+    width: 100vw;    
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+}
+
+.albums ul {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.albums li {
+    width: 200px;
+    height: 200px
+}
+
+.albums img {
+    width: 100%;
+    height: 100%;
+}
