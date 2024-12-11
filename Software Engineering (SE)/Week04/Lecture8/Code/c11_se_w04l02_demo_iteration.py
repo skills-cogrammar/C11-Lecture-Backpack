@@ -54,7 +54,7 @@ while choice != "3":
 # ============= For loop Examples
 
 # Example 1: Iterating Over a List of Fruits
-fruit_list = ["apple", "orange", "peer", "litchi"]
+fruit_list = ["apple", "orange", "strawberry", "litchi"]
 
 print(fruit_list)
 print("This is the list 👆")
