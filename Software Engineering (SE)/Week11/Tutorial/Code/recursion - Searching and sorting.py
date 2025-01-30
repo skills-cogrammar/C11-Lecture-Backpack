@@ -23,7 +23,7 @@ def summ(n):
 print(summ(5))
 
 # Example usage
-print(sum_natural(5))  # Output: 15 (1+2+3+4+5)
+print(summ(5))  # Output: 15 (1+2+3+4+5)
 
 ##################################### Search Algorithms #####################################
 
@@ -78,6 +78,16 @@ def binary_search(arr, target):
 #     Recursive implementation of binary search
 #     Same time complexity as iterative version but uses O(log n) space due to recursion stack
 #     """
+#     if high >= low:
+#         mid = low + (high - low) // 2
+#         if arr[mid] == target:
+#             return mid
+#         elif arr[mid] > target:
+#             return binary_search(arr, low, mid-1, target)
+#         else:
+#             return binary_search(arr, mid + 1, high, target)
+#     else:
+#         return -1
 
 ##################################### Sort Algorithms #####################################
 
