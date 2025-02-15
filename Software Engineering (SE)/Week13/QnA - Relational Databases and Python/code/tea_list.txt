@@ -1,0 +1,5 @@
+Earl Grey,Black,2.50
+English Breakfast,Black,2.00
+Chamomile,Herbal,2.75
+Peppermint,Herbal,2.60
+Green Tea,Green,2.80
