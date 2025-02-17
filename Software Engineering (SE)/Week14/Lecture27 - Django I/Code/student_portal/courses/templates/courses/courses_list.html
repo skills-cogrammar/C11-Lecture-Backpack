@@ -1,0 +1,23 @@
+<!-- templates/courses/courses_list.html --> 
+
+{% extends "courses/base.html" %}
+
+{% block title %}Courses - Student Portal{% endblock %}
+
+{% block content %}
+    <h2>Available Courses</h2>
+    <ul>
+        {% for course in courses %}
+            <li>{{ course }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- If there are no courses, display a message -->
+    {% if not courses %}
+        <p>No courses available at the moment.</p>
+    {% endif %}
+
+    <!-- Link back to the Home page -->
+    <p><a href="{% url 'home' %}">Back to Home</a></p>
+{% endblock %}
+

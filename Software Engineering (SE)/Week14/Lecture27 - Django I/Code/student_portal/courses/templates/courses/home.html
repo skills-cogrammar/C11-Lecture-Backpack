@@ -1,0 +1,12 @@
+<!-- templates/courses/home.html --> 
+
+{% extends "courses/base.html" %}
+
+{% block title %}Home - Student Portal{% endblock %}
+
+{% block content %}
+    <h2>Welcome to the Student Portal</h2>
+    <p>Explore your courses and learning materials.</p>
+    <p><a href="{% url 'courses_list' %}">View Available Courses</a></p>
+{% endblock %}
+
