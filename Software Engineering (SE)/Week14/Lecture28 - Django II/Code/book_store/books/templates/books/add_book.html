@@ -1,0 +1,22 @@
+<!-- Declare HTML5 document type -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add a Book</title>
+</head>
+<body>
+    <h1>Add a New Book</h1>
+    <!-- Form that submits data via POST method -->
+    <form method="POST">
+        <!-- Django's Cross-Site Request Forgery protection token -->
+        {% csrf_token %}
+        
+        <!-- Render form fields using Django's template language -->
+        <!-- .as_p wraps each field in <p> tags for better spacing -->
+        {{ form.as_p }}
+        
+        <!-- Submit button for the form -->
+        <button type="submit">Add Book</button>
+    </form>
+</body>
+</html>
