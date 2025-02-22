@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    display: flex;               /* Use Flexbox */
+    align-items: center;         /* Vertically center items */
+    justify-content: center;     /* Center the content horizontally */
+    padding: 1rem 0;
+}
+
+.header img.logo {
+    position: absolute;          /* Take logo out of the Flexbox flow */
+    left: 1rem;                  /* Align logo to the left */
+    height: 50px;                /* Adjust size of the logo */
+    width: auto;
+}
+
+.header h1 {
+    text-align: center;          /* Center the header text */
+    margin-left: 70px;           /* Push heading right to avoid overlap with logo */
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+    padding: 1rem;
+    margin: 2rem 0 0 0; /* Top margin to separate from the content */
+}
+.container {
+    width: 80%;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.index-page, .add-post-page, .view-post-page, .edit-post-page {
+    margin-bottom: 2rem;
+}
+.add-post-button, .edit-post-button, .back-button {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+cursor: pointer;
+    text-decoration: none;
+}
+
+.back-button {
+    background-color: #6c757d;
+}
+form label {
+    display: block;
+    margin-top: 1rem;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding in the total width/height */
+}
+form button {
+    margin-top: 1rem 0;
+    padding: 0.6rem 1rem;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
