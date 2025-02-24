@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Setup Guide</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #1f0303;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #0f0505;
+        }
+        code {
+            background-color: #333;
+            color: #f8f8f8;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+        }
+        pre {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+        a {
+            color: #4da6ff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Django Setup Guide</h1>
+
+<h2>Step 1: Install Python and Virtual Environment</h2>
+<p>Ensure Python is installed:</p>
+<pre><code>python --version</code></pre>
+<p>If <code>virtualenv</code> is not installed, install it:</p>
+<pre><code>pip install virtualenv</code></pre>
+
+<hr>
+
+<h2>Step 2: Create and Activate a Virtual Environment</h2>
+<p>Navigate to the directory where you want your project and create a virtual environment:</p>
+<pre><code>python -m venv myenv</code></pre>
+<p>Activate the virtual environment:</p>
+<ul>
+    <li><strong>Windows:</strong>
+        <pre><code>myenv\Scripts\activate</code></pre>
+    </li>
+    <li><strong>Mac/Linux:</strong>
+        <pre><code>source myenv/bin/activate</code></pre>
+    </li>
+</ul>
+
+<hr>
+
+<h2>Step 3: Install Django</h2>
+<p>Inside the virtual environment, install Django:</p>
+<pre><code>pip install django</code></pre>
+<p>Verify installation:</p>
+<pre><code>django-admin --version</code></pre>
+
+<hr>
+
+<h2>Step 4: Create the Django Project</h2>
+<p>Create the <strong>book_store</strong> project:</p>
+<pre><code>django-admin startproject book_store</code></pre>
+<p>Navigate into the project directory:</p>
+<pre><code>cd book_store</code></pre>
+
+<hr>
+
+<h2>Step 5: Run Migrations</h2>
+<p>Before creating a superuser, apply initial migrations:</p>
+<pre><code>python manage.py migrate</code></pre>
+
+<hr>
+
+<h2>Step 6: Create a Superuser</h2>
+<p>Create an admin user to access the Django admin panel:</p>
+<pre><code>python manage.py createsuperuser</code></pre>
+<p>You'll be prompted to enter:</p>
+<ul>
+    <li><strong>Username</strong> (e.g., <code>admin</code>)</li>
+    <li><strong>Email Address</strong> (optional)</li>
+    <li><strong>Password</strong> (enter and confirm a secure password)</li>
+</ul>
+<p>If successful, you'll see:</p>
+<pre><code>Superuser created successfully.</code></pre>
+
+<hr>
+
+<h2>Step 7: Run the Development Server</h2>
+<p>Start the Django server:</p>
+<pre><code>python manage.py runserver</code></pre>
+<p>Visit:</p>
+<pre><code>http://127.0.0.1:8000/admin/</code></pre>
+<p>Log in using the <strong>superuser credentials</strong>.</p>
+<p>✅ Now, we have the admin panel set up and ready!</p>
+
+<hr>
+
+<h2>Step 8: Create the Books App</h2>
+<p>Django projects consist of apps. Create an app named <strong>books</strong>:</p>
+<pre><code>python manage.py startapp books</code></pre>
+
+<hr>
+
+<h2>Step 9: Register the App in Django</h2>
+<p>Open <code>book_store/settings.py</code> and add <code>'books'</code> to <code>INSTALLED_APPS</code>:</p>
+<pre><code>INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'books',  # Add this line
+]</code></pre>
+
+<hr>
+
+<h2>Step 10: Create a "Hello World" View</h2>
+<p>Open <code>books/views.py</code> and define a simple view:</p>
+<pre><code>from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("Hello, Django!")</code></pre>
+
+<hr>
+
+<h2>Step 11: Configure URLs</h2>
+<p>Edit <code>book_store/urls.py</code> to include the new app’s URL:</p>
+<pre><code>from django.contrib import admin
+from django.urls import path
+from books.views import home
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', home),  # Add this line
+]</code></pre>
+<p>Restart the server and visit <code>http://127.0.0.1:8000/</code>. You should see:</p>
+<pre><code>Hello, Django!</code></pre>
+
+<hr>
+
+<h2>Step 12: Create the Book Model</h2>
+<p>In <code>books/models.py</code>, define the <strong>Book</strong> model:</p>
+<pre><code>from django.db import models
+
+class Book(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name</code></pre>
+
+<hr>
+
+<h2>Step 13: Register the Model in the Admin Panel</h2>
+<p>To manage books via the Django admin, edit <code>books/admin.py</code>:</p>
+<pre><code>from django.contrib import admin
+from .models import Book
+
+@admin.register(Book)
+class BookAdmin(admin.ModelAdmin):
+    list_display = ('name', 'description', 'created_at')
+    search_fields = ('name',)</code></pre>
+<p>Now, books will be visible in the admin panel.</p>
+
+<hr>
+
+<h2>Step 14: Run Migrations</h2>
+<p>Apply the database changes:</p>
+<pre><code>python manage.py makemigrations
+python manage.py migrate</code></pre>
+
+<hr>
+
+<h2>Step 15: Create a Simple Book Form</h2>
+<p>Create the file <code>books/forms.py</code>. In <code>books/forms.py</code>, create a Django form with validation:</p>
+<pre><code>from django import forms
+from .models import Book
+
+class BookForm(forms.ModelForm):
+    class Meta:
+        model = Book
+        fields = ['name', 'description']
+
+    def clean_name(self):
+        name = self.cleaned_data.get('name')
+        if len(name) < 3:
+            raise forms.ValidationError("Book name must be at least 3 characters long.")
+        return name</code></pre>
+
+<hr>
+
+<h2>Step 16: Create a View for Adding Books</h2>
+<p>In <code>books/views.py</code>, add a view to handle book submissions:</p>
+<pre><code>from django.shortcuts import render, redirect
+from .forms import BookForm
+
+def add_book(request):
+    if request.method == "POST":
+        form = BookForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('book_success')
+    else:
+        form = BookForm()
+    
+    return render(request, 'books/add_book.html', {'form': form})
+
+def book_success(request):
+    return HttpResponse("Book added successfully!")</code></pre>
+
+<hr>
+
+<h2>Step 17: Configure URLs for the Book Form</h2>
+<p>Create <code>books/urls.py</code>:</p>
+<pre><code>from django.urls import path
+from .views import add_book, book_success
+
+urlpatterns = [
+    path('add/', add_book, name='add_book'),
+    path('success/', book_success, name='book_success'),
+]</code></pre>
+<p>Update <code>book_store/urls.py</code>:</p>
+<pre><code>from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('books/', include('books.urls')),
+]</code></pre>
+
+<hr>
+
+<h2>Step 18: Create the HTML Template</h2>
+<p>Create a <code>templates</code> folder inside the <code>books</code> app:</p>
+<pre><code>mkdir books/templates
+mkdir books/templates/books</code></pre>
+<p>Create <code>books/templates/books/add_book.html</code>:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Add a Book&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Add a New Book&lt;/h1&gt;
+    &lt;form method="POST"&gt;
+        {% csrf_token %}
+        {{ form.as_p }}
+        &lt;button type="submit"&gt;Add Book&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<hr>
+
+<h2>Step 19: Run the Server and Test</h2>
+<p>Restart the server:</p>
+<pre><code>python manage.py runserver</code></pre>
+<p>✅ <strong>Visit Django Admin Panel</strong>:</p>
+<p>Go to <code>http://127.0.0.1:8000/admin/</code></p>
+<p>Log in with the <strong>superuser credentials</strong> to <strong>view and manage books</strong>.</p>
+<p>✅ <strong>Visit Book Form</strong>:</p>
+<p>Go to <code>http://127.0.0.1:8000/books/add/</code></p>
+<p>Enter book details and submit. If successful, you'll be redirected to a success page.</p>
+
+<hr>
+
+<h2>Step 20: Add Testing Component</h2>
+<p>Testing is a critical part of any Django project. Below, we’ll add tests for the <code>Book</code> model, <code>BookForm</code>, and <code>BookView</code>.</p>
+
+<h3>0. Run an Empty Test with Verbosity</h3>
+<p>Before starting the project, ensure that the testing environment is set up correctly. Run an empty test with verbosity level 3 to confirm that Django's test runner is working:</p>
+<pre><code>python manage.py test -v 3</code></pre>
+<p>This command will output detailed information about the test discovery process. If no tests are found, it will still confirm that the test runner is functioning correctly.</p>
+
+<h3>1. Create an Empty Test File</h3>
+<p>First, ensure the <code>tests.py</code> file exists in the <code>books</code> app folder. If it doesn’t, create it:</p>
+<pre><code>touch books/tests.py</code></pre>
+
+<h3>2. Update <code>tests.py</code> with Model, Form, and View Tests</h3>
+<p>Add the following test cases to <code>books/tests.py</code>:</p>
+<pre><code>from django.test import TestCase
+from django.utils import timezone
+from .models import Book
+from .forms import BookForm
+
+class BookModelTestCase(TestCase):
+    def setUp(self):
+        Book.objects.create(name="Julien", description="Julien's book")
+        Book.objects.create(name="Riaan", description="Riaan's book")
+        Book.objects.create(name="Armand", description="Armand's book")
+
+    def test_model_books_count(self):
+        count = Book.objects.count()
+        self.assertEqual(count, 3)
+
+    def test_model_name_length(self):
+        book = Book.objects.create(name="A", description="Short name")
+        self.assertLessEqual(len(book.name), 100)
+
+    def test_model_description_length(self):
+        book = Book.objects.create(name="Test", description="This is a very long description that should be allowed.")
+        self.assertLessEqual(len(book.description), 1000)
+
+    def test_model_created_at(self):
+        book = Book.objects.get(name="Julien")
+        self.assertIsNotNone(book.created_at)
+        self.assertIsInstance(book.created_at, timezone.datetime)
+
+    def test_model_str(self):
+        book = Book.objects.get(name="Julien")
+        self.assertEqual(str(book), "Julien")
+
+    def test_model_books_title_description(self):
+        book1 = Book.objects.get(name="Julien")
+        book2 = Book.objects.get(name="Riaan")
+        self.assertEqual(book1.description, "Julien's book")
+        self.assertEqual(book2.description, "Riaan's book")
+
+
+class BookFormTestCase(TestCase):
+    def test_clean_name_too_short(self):
+        # Create a form instance with a name that is too short
+        form = BookForm(data={'name': 'ab', 'description': 'Test description'})
+        # Check if the 'name' field has the expected error message
+        self.assertIn('name', form.errors)
+        self.assertEqual(form.errors['name'], ["Book name must be at least 3 characters long."])
+
+    def test_form_save(self):
+        form = BookForm(data={'name': 'New Book', 'description': 'New book description'})
+        self.assertTrue(form.is_valid())
+        form.save()
+        self.assertEqual(Book.objects.filter(name='New Book').count(), 1)
+
+    def test_form_short_name(self):
+        form = BookForm(data={'name': 'a', 'description': 'New book description'})
+        self.assertFalse(form.is_valid())
+
+
+class BookViewTestCase(TestCase):
+    def test_home_view(self):
+        response = self.client.get('/')
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Hello, Django!")
+
+    def test_add_book_view(self):
+        response = self.client.get('/books/add/')
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Add a New Book")
+
+    def test_add_book_form_submission(self):
+        response = self.client.post('/books/add/', {
+            'name': 'Test Book',
+            'description': 'This is a test book.'
+        })
+        self.assertEqual(response.status_code, 302)  # Redirect after successful form submission
+        self.assertEqual(Book.objects.filter(name='Test Book').count(), 1)
+</code></pre>
+
+<h3>3. Run the Tests</h3>
+<p>Run the tests using the following command:</p>
+<pre><code>python manage.py test books</code></pre>
+<p>If everything is set up correctly, you should see output indicating that all tests passed.</p>
+
+<hr>
+
+<h2>🎉 Congratulations!</h2>
+<p>You now have:</p>
+<ul>
+    <li>✅ <strong>Django admin panel with a superuser</strong></li>
+    <li>✅ <strong>Book model registered in admin</strong></li>
+    <li>✅ <strong>A form with validation for adding books</strong></li>
+    <li>✅ <strong>A complete Django project setup</strong></li>
+</ul>
+
+</body>
+</html>
