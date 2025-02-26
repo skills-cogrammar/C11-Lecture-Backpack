@@ -1,0 +1,11 @@
+<!-- sport_app/templates/sport_app/protected.html -->
+
+{% extends 'base.html' %}
+{% block title %}Protected{% endblock %}
+{% block content %}
+<div class="protected-page">
+    <h2>Protected Page</h2>
+    <p>You are viewing a protected page.</p>
+    <a class="default-button" href="{% url 'index' %}">Return to Home</a>
+</div>
+{% endblock %}
