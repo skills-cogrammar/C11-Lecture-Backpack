@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+<!-- Extends the base template to inherit its structure and placeholders. -->
+{% block title %}Sport Register{% endblock %}
+{% load static %}
+<!-- Loads static files such as CSS stylesheets and JavaScript files. -->
+
+{% block head %}
+    <!-- Overrides the head block defined in the base template. -->
+    <link rel="stylesheet" href="{% static 'styles.css'  %}">
+    <!-- Links the login stylesheet for styling purposes. -->
+{% endblock %}
+
+
+{% block content %}
+<!-- Overrides the body block defined in the base template. -->
+<div class="container">
+    <!-- Container for sport registration form and additional content. -->
+    <h1>Register for a Sport on Sportsday:</h1>
+    <!-- Heading for sport registration form. -->
+    <form id="registrationform" method="post" action="{% url 'sport_registration' %}" autocomplete="off">
+        <!-- Form for sport registration. -->
+        {% csrf_token %}
+        <!-- CSRF token for form security. -->
+        {{form.as_p}}
+        <!-- Renders the form fields as paragraphs. -->
+        <input type="submit" value="Submit">
+        <!-- Submit button for form submission. -->
+    </form><br>
+    <form action="{% url 'registrants' %}" style="display: inline-flex;">
+        <!-- Form for redirecting to the registrants page. -->
+        <a href="{% url 'registrants' %}"><input type="submit" value="Back"></a>
+        <!-- Button for going back to the registrants page. -->
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+<!-- sport_app/templates/sport_app/index.html -->
+
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="index-page">
+    <h1>Welcome to the Sports App</h1>
+    {% if user.is_authenticated %}
+        <p>You are logged in as {{ user.username }}.</p>
+        <a class="default-button" href="{% url 'registrants' %}">Go to Registrants Page</a>
+    {% else %}
+        <p>You are not logged in.</p>
+        <a class="default-button" href="{% url 'login' %}">Login</a>
+        <a class="default-button" href="{% url 'register' %}">Register</a>
+    {% endif %}
+</div>
+{% endblock %}
