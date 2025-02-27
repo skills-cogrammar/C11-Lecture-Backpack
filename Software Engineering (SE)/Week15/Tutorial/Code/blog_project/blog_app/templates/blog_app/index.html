@@ -1,0 +1,23 @@
+{% extends 'blog_app/base.html' %}
+
+{% block content %}
+<div class="index-page">
+    <h1>Blog Posts</h1>
+    <ul>
+        {% for post in posts %}
+        <li><a href="{% url 'view_post' post.id %}">{{ post.title }}</a> - {{ post.created_at }} by {{ post.author }}</li>
+        {% endfor %}
+    </ul>
+
+    {% if perms.blog_app.add_blogpost %}
+        <a class="add-post-button" href="{% url 'add_post' %}">Add New Post</a>
+    {% endif %}
+
+    {% if request.user.is_authenticated %}
+        <a class="logout-button" href="{% url 'logout' %}">Logout</a>
+    {% else %}
+        <a class="login-button" href="{% url 'login' %}">Login</a>
+        <a class="register-button" href="{% url 'register' %}">Register</a>
+    {% endif %}
+</div>
+{% endblock %}

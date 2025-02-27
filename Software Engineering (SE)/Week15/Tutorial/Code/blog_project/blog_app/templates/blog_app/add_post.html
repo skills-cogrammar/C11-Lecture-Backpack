@@ -1,0 +1,13 @@
+{% extends 'blog_app/base.html' %}
+{% block title %}Add New Post{% endblock %}
+{% block content %}
+<div class="add-post-page">
+    <h1>Add New Post</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    <a class="back-button" href="{% url 'index' %}">Back to Posts List</a>
+</div>
+{% endblock %}

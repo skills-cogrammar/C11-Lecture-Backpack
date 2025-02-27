@@ -1,0 +1,13 @@
+{% extends 'blog_app/base.html' %}
+{% block title %}Edit Post{% endblock %}
+{% block content %}
+<div class="edit-post-page">
+    <h1>Edit Post</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update</button>
+    </form>
+    <a class="back-button" href="{% url 'view_post' post.id %}">Cancel</a>
+</div>
+{% endblock %}
