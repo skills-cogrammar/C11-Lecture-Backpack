@@ -1,0 +1,26 @@
+{% extends 'registration/base.html' %}
+{% load static %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Create an Account</h1>
+    <form method="POST" autocomplete="off">
+        {% csrf_token %}
+        {{ form.as_p }}
+        
+        <label for="account_type"><strong>Account Type:</strong></label>
+        <select name="account_type" id="account_type">
+            <option value="reader">Reader</option>
+            <option value="poster">Poster</option>
+        </select>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <div class="login-container">
+        <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+    </div>
+</div>
+{% endblock %}

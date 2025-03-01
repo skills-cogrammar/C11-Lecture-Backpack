@@ -1,0 +1,89 @@
+{% extends 'blog_app/base.html' %}
+
+{% block content %}
+<style>
+    .view-post-page {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .view-post-page h1 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .view-post-page p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .view-post-page strong {
+        color: #222;
+    }
+
+    .post-meta {
+        font-size: 14px;
+        color: #777;
+        margin-top: 10px;
+    }
+
+    .button-container {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 16px;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .edit-post-button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+    }
+
+    .edit-post-button:hover {
+        background-color: #0056b3;
+    }
+
+    .back-button {
+        background-color: #6c757d;
+        color: white;
+    }
+
+    .back-button:hover {
+        background-color: #545b62;
+    }
+</style>
+
+<div class="view-post-page">
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.content }}</p>
+    
+    <div class="post-meta">
+        <p><strong>Author:</strong> {{ post.author }}</p>
+        <p><strong>Published on:</strong> {{ post.created_at }}</p>
+    </div>
+
+    <div class="button-container">
+        {% if perms.blog_app.change_blogpost %}
+            <a class="btn edit-post-button" href="{% url 'edit_post' post.id %}">Edit Post</a>
+        {% endif %}
+        <a class="btn back-button" href="{% url 'index' %}">Back to Posts List</a>
+    </div>
+</div>
+{% endblock %}

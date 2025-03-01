@@ -1,0 +1,20 @@
+{% extends 'registration/base.html' %}
+{% load static %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Login</h1>
+    <form method="POST" autocomplete="off">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Login">
+    </form>
+
+    <div class="register-container">
+        <p>New user? <a href="{% url 'register' %}">Create an account</a></p>
+    </div>
+</div>
+{% endblock %}
